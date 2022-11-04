@@ -2,7 +2,7 @@ const { test, expect } = require("@playwright/test");
 
 import { email, password } from "../user";
 
-/*test("valid authorization", async ({ page }) => {
+test("valid authorization", async ({ page }) => {
   await page.goto("https://netology.ru/?modal=sign_in");
 
   const emailField = await page.getByPlaceholder("Email");
@@ -11,7 +11,7 @@ import { email, password } from "../user";
   await passwordField.fill(password);
   await page.locator("button[data-testid = 'login-submit-btn']").click();
   await expect(page.locator("h2")).toHaveText("Мои курсы и профессии");
-});*/
+});
 
 test("invalid authorization with valid email", async ({ page }) => {
   await page.goto("https://netology.ru/?modal=sign_in");
